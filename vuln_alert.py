@@ -23,8 +23,6 @@ def vuln_alert_dingding(request):
 	url = xray_json_data.get('target').get('url')
 	plugin = xray_json_data.get('plugin')
 	vuln_class = xray_json_data.get('vuln_class')
-	create_time = xray_json_data.get('create_time')
-	create_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(create_time))
 
 	send_json_data = {
 		"msgtype": "markdown",
